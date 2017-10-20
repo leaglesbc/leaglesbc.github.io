@@ -3,26 +3,47 @@ body{margin:0}
 p{padding:0 5vw;font: 1.15em 'Lato', sans-serif;}
 b{font-weight:900;}
 html{font:900 1em 'Lato', sans-serif;}
-a{text-decoration: none}
+a{text-decoration: none;color:inherit;transition:all 150ms;}
+a:hover{color:#C9C9C9!important;}
 /*IDs*/
-	#pull-button{cursor: pointer}
+	#pull-button{transition:all 150ms;cursor: pointer}
+	#pull-button:hover{color:#C9C9C9}
 	#mast-sbc{
 		grid-area:sbc-links;
 		text-align:right;
-		line-height:20px;
 		padding-right:4px;
-		background-color:#2A4F7F;}
+		color:#FFF!important;}
 	#mast-crap-container{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-area:right;
 		background-color:#264773;
+		border-bottom: 4px #3974BF solid;
 	}
 	#mast-crap-container > a{
+		color:#FFF;
 		padding:0 8px;
 	}
-	#mast-crap-container > a:nth-child(even){
-		background-color:#2A4F7F;
+	#masthead{
+		background:#3D3D3D;
+		color:#CCC;
+		display:grid;
+		z-index: 2;
+		line-height:50px;
+		text-align: center;
+		grid-area:mast;
+		grid-template-rows:auto;
+		grid-template-columns:4fr 1fr 1fr 1fr auto;
+		grid-template-areas:
+		"logo home-b right . sbc-links";
+		text-transform: uppercase;
+		box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5)}
+	#masthead> a:visited{
+		color:#FFF;
+		padding:0 8px;
+	}
+	#mast-crap-container > a:nth-child(n+1){
+		background-color:#4C4C4C;
 		height:100%;
 	}
 	#content{
@@ -36,27 +57,16 @@ a{text-decoration: none}
 		text-transform: uppercase;
 	}
 /*Classes*/
-	.crap-head-img{background-size:cover!important; height:7rem;width:22rem;}
+	.crap-head-img{background-size:cover!important;height:7rem;width:22rem;}
 	.hidebig{display:none}
-	.masthead{
-		display:grid;
-		z-index: 2;
-		line-height:50px;
-		text-align: center;
-		grid-area:mast;
-		grid-template-rows:20px auto;
-		grid-template-columns:4fr 1fr 1fr 1fr auto;
-		grid-template-areas:
-		"logo . . . sbc-links" 
-		"logo home-b . . right";
-		text-transform: uppercase;
-		box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5)}
+	.active{background-color:#3974BF!important;}
+	.mast-button{background-color:#3D3D3D;color:#FFF}
 /*Responsive Website Section*/
 	@media (max-width: 1125px){
 		.hidebig{display:block}
 		p{padding:0 15vw;font-size: 2em;}
 		#mast-sbc{text-align: inherit;line-height: inherit}
-		.masthead{
+		#masthead{
 			grid-template-rows:80px 60px;
 			grid-template-columns:1fr 1fr 1fr;
 			grid-template-areas:
@@ -65,9 +75,10 @@ a{text-decoration: none}
 			line-height:60px;
 			font-size:1.5em;
 			}
+			.crap-head-img{margin:auto;}
 		#mast-crap-container{
 			position:absolute;
-			transition: all 250ms;
+			transition: all 150ms;
 			top:0px;
 			z-index: -1;
 			width:100%;
