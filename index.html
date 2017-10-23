@@ -31,17 +31,10 @@
 			</div>
 		</div>
 
-		<div style="grid-area:body;background-color:rgb(255, 100, 100);height:100%;">
-			<div style="height:50vh;background-color:#83F3F1">JUMBOTRON
+		<div style="grid-area:body; display:grid;grid-template-columns:1fr 1fr;grid-template-areas: 'jtron jtron' 'cont rast' 'cp cp';background-color:rgb(255, 100, 100);height:100%;">
+			<div style="grid-area:jtron;height:50vh;background-color:#83F3F1">JUMBOTRON
 			</div>
-				<a href="contrast.html"><h1 style="font:7rem'Anton', sans-serif;"><span style="background-color:white;color:black;padding-left:30vw;">CONT</span><span style="padding-right:30vw;background-color:black;color:white">RAST</span></h1></a>
-					<p><i>Contrast allows you to emphasize or highlight key elements within your design. Contrast is created when two elements are total opposites.</i>
-				<div class="crap-head-img" style="background:url(images/repetition_header.jpg);"><h1 style="font:7rem'Anton', sans-serif;">REPETITION</h1></div>
-					<p><i>The principle of repetition simply means the reusing of the same or similar elements throughout your design.</i>
-				<div class="crap-head-img" style="background:url(images/alignment_header.jpg);"></div>
-					<p><i>Alignment is one of the most basic and important principles of design. It allows us to create order and organisation among elements.</i>
-				<div class="crap-head-img" style="background:url(images/proximity_header.jpg);"></div>
-					<p><i>Proximity helps create organisation. By grouping similar elements together or in close proximity, you create a relationship between those elements.</i>
-			</div>
+				<a href="contrast.html"><h1 style="font:7rem'Anton', sans-serif;"><div style="grid-area:cont;background-color:white;color:black;">CONT</div><div style="grid-area:rast;background-color:black;color:white">RAST</div></h1></a>
+					<p style="grid-area:cp;"><i>Contrast allows you to emphasize or highlight key elements within your design. Contrast is created when two elements are total opposites.</i></div>
 	</div>
 </body>

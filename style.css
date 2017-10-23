@@ -11,7 +11,7 @@ a:hover{color:#C9C9C9!important;}
 	#mast-sbc{
 		grid-area:sbc-links;
 		text-align:right;
-		padding-right:4px;
+		padding-right:16px;
 		color:#FFF!important;}
 	#mast-crap-container{
 		display: grid;
@@ -74,6 +74,7 @@ a:hover{color:#C9C9C9!important;}
 			"home-b pages-b sbc-links";
 			line-height:60px;
 			font-size:1.5em;
+			width:100vw;
 			}
 			.crap-head-img{margin:auto;}
 		#mast-crap-container{
