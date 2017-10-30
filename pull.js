@@ -1,7 +1,7 @@
 var isOut = 1;
 var width = "140px";
 $( document ).ready(function() {
-$(".pull-out").css("top", "-" + width)
+$(".pull-out").css("top", "_" + width)
 	$(".pull-out").css("top", width)
 	$("#pull-button").click(function(){
 		if (isOut == 0) {
